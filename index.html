@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Weather App</h1>
+  <div class="search-container">
+    <input type="text" id="city-input" placeholder="Enter city name">
+    <button onclick="getWeather()">Search</button>
+    <label class="switch">
+      <input type="checkbox" id="temperature-toggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div id="weather-container">
+    <h2 id="city-name"></h2>
+    <div id="weather-info">
+      <div id="temperature"></div>
+      <div id="description"></div>
+      <img id="weather-icon" src="">
+    </div>
+    <div id="error-message"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
