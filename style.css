@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 50px;
+  }
+  
+  .search-container {
+    margin: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .toggle-labels {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  .c-label, .f-label {
+    padding: 2px;
+    width: 20px;
+    text-align: center;
+  }
+  
+  #weather-container {
+    margin-top: 50px;
+  }
+  
+  #city-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #temperature {
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  #error-message {
+    color: red;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+    }
+  
+    #weather-info {
+      flex-direction: column;
+    }
+  
+    #temperature {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
